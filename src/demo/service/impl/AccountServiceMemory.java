@@ -8,6 +8,11 @@ import demo.service.IAccountService;
 public class AccountServiceMemory implements IAccountService {
 
 	@Override
+	public boolean matches(String type) {
+		return "memory".equals(type);
+	}
+	
+	@Override
 	public Account find(long id) {
 
 		return null;

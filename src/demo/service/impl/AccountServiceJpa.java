@@ -31,4 +31,9 @@ public class AccountServiceJpa implements IAccountService {
 		return null;
 	}
 
+	@Override
+	public boolean matches(String type) {
+		return "jpa".equals(type);
+	}
+
 }

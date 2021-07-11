@@ -8,6 +8,11 @@ import demo.service.IAccountService;
 public class AccountServiceSql implements IAccountService {
 
 	@Override
+	public boolean matches(String type) {
+		return "sql".equals(type);
+	}
+	
+	@Override
 	public Account find(long id) {
 		// TODO Auto-generated method stub
 		return null;

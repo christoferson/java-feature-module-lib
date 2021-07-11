@@ -6,6 +6,8 @@ import demo.model.Account;
 
 public interface IAccountService {
 
+	boolean matches(String type);
+	
 	Account find(long id);
 	
 	Account register(Account account);
