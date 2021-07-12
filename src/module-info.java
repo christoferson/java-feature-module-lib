@@ -1,6 +1,6 @@
 import demo.service.IAccountService;
-import demo.service.impl.AccountServiceJpa;
 import demo.service.impl.AccountServiceMemory;
+import demo.service.jpa.AccountServiceJpa;
 import demo.service.sql.AccountServiceSql;
 
 module demo.module.lib {
@@ -8,6 +8,7 @@ module demo.module.lib {
 	exports demo.service;
 	provides IAccountService with AccountServiceMemory, AccountServiceJpa, AccountServiceSql;
 
+	// restrict which modules have access to your packages by using the exports ... to <module name>
 	exports demo.service.pub1 to demo.module;
 	exports demo.service.pub2 to demo.module2;
 }

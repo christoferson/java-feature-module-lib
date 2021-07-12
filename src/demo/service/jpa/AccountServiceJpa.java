@@ -1,4 +1,4 @@
-package demo.service.impl;
+package demo.service.jpa;
 
 import java.math.BigDecimal;
 
