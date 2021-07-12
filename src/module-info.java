@@ -8,7 +8,8 @@ module demo.module.lib {
 	exports demo.service;
 	provides IAccountService with AccountServiceMemory, AccountServiceJpa, AccountServiceSql;
 
-	// restrict which modules have access to your packages by using the exports ... to <module name>
 	exports demo.service.pub1 to demo.module;
 	exports demo.service.pub2 to demo.module2;
+	
+	opens demo.service.open1 to demo.module;
 }
