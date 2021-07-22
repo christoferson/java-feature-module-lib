@@ -1,7 +1,5 @@
 package demo.model;
 
-import java.math.BigDecimal;
-
 public class Customer {
 
 	private long id;
