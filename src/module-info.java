@@ -3,12 +3,12 @@ import demo.service.ICustomerService;
 import demo.service.impl.AccountServiceMemory;
 import demo.service.impl.CustomerServiceFactory;
 import demo.service.jpa.AccountServiceJpa;
-import demo.service.sql.AccountServiceSql;
 
 module demo.module.lib {
 	exports demo.model;
 	exports demo.service;
-	provides IAccountService with AccountServiceMemory, AccountServiceJpa, AccountServiceSql;
+	//provides IAccountService with AccountServiceMemory, AccountServiceJpa, AccountServiceSql;
+	provides IAccountService with AccountServiceMemory, AccountServiceJpa;
 	provides ICustomerService with CustomerServiceFactory;
 
 	exports demo.service.pub1 to demo.module;
